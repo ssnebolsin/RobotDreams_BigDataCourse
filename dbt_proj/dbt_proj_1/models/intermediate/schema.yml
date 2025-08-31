@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: int_players_male
+    description: "Staging model for male players"
+    tests:
+      - wage_vs_value:
+          wage_col: wage_eur
+          value_col: value_eur
+    columns:
+      - name: player_id
+        description: "Unique identifier for each player"
+        tests:
+          - not_null
+          - unique
+      - name: gender
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['male', 'female']
+  - name: int_players_female
+    description: "Staging model for female players"
+    tests:
+      - wage_vs_value:
+          wage_col: wage_eur
+          value_col: value_eur
+    columns:
+      - name: player_id
+        description: "Unique identifier for each female player"
+        tests:
+          - not_null
+          - unique
+      - name: gender
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['male', 'female']
+  - name: int_team_profiles_male
+    description: "Staging model for male teams"
+    tests:
+      - avg_team_rating:
+          rating_col: avg_overall_rating
+    columns:
+      - name: club_team_id
+        description: "Unique identifier for each female player"
+        tests:
+          - not_null
+          - unique
+  - name: int_team_profiles_female
+    description: "Staging model for female teams"
+    tests:
+      - avg_team_rating:
+          rating_col: avg_overall_rating
+    columns:
+      - name: club_team_id
+        description: "Unique identifier for each female player"
+        tests:
+          - not_null
+          - unique

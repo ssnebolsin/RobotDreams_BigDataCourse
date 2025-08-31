@@ -1,0 +1,16 @@
+﻿position,description
+GK,Goalkeeper
+LB,Full-Back
+RB,Full-Back
+LWB,Wing-Back
+RWB,Wing-Back
+CB,Center-Back
+CDM,DefensiveMidfielder
+CM,CentralMidfielder
+CAM,AttackingMidfielder
+RM,WideMidfielder
+LM,WideMidfielder
+RW,Winger
+LW,Winger
+ST,Striker
+CF,Striker

@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: public
+    database: dbt_hw_13
+    schema: public
+    tables:
+      - name: female_coaches
+      - name: male_coaches
+      - name: female_teams
+      - name: female_players
+      - name: male_teams
+      - name: male_players
+      - name: positions
